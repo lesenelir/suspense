@@ -4,7 +4,10 @@ import {wrapPromise} from "@/libs/wrapPromise.ts"
 const request = () => {
   const url: string = 'https://jsonplaceholder.typicode.com/posts/'
 
-  const promise = fetch(url).then(res => res.json()).catch(err => console.log(err))
+  const promise =
+    fetch(url)
+      .then(res => res.json())
+      .catch(err => console.log(err))
 
   return wrapPromise(promise)
 }
