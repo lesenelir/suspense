@@ -5,6 +5,10 @@ import {IPost} from "@/types/data.ts"
 // This methods may be easily lead to the network waterfall problem.
 // This component is not working with React Suspense Component, as it's already handing the loading state UI.
 
+// The first thing is rendering, and then fetching data.
+
+// Rendering components before fetching data.
+
 function FetchOnRender() {
   const [posts, setPosts] = useState<IPost[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
